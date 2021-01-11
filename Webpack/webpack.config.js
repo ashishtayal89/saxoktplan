@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HelloCompilationPlugin = require("./plugins/HelloCompilationPlugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./app.js",
@@ -54,5 +55,12 @@ module.exports = {
   },
   watch: true,
   devtool: "source-map",
-  plugins: [new HelloCompilationPlugin(), new webpack.ProgressPlugin()]
+  plugins: [
+    new HelloCompilationPlugin(),
+    new webpack.ProgressPlugin(),
+    new HtmlWebpackPlugin({
+      title: "My App",
+      template: "index.html"
+    })
+  ]
 };
