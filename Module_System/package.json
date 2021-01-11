@@ -4,8 +4,19 @@
   "description": "Plural videos",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm-run-all build:*",
+    "build:es6": "webpack ./es6_import.js ./build/es6.js",
+    "build:common": "webpack ./common_import.js ./build/common.js",
+    "node:common": "node ./build/common.js",
+    "node:es6": "node ./build/es6.js",
+    "common": "npm-run-all build:common node:common",
+    "es6": "npm-run-all build:es6 node:es6",
+    "all": "npm-run-all common es6"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
 }
