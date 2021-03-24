@@ -14,7 +14,7 @@ https://exploringjs.com/es6/ch_modules.html
 
    1. Assing it to the **module.exports** or **exports** :
 
-   For instance we consider the below code in file common_export2.js. But all other other properties of the export are assigned to this export. Run `npm run es6` and see the **common default 2**. Notice it exports a function instead of an object with some properties. Also notice that the `a` property is missing from the export since module.exports !== exports now.
+   For instance we consider the below code in file common_export2.js. But all other properties of the export are assigned to this export. Run `npm run es6` and see the **common default 2**. Notice it exports a function instead of an object with some properties. Also notice that the `a` property is missing from the export since module.exports !== exports now.
 
    2. `Object.defineProperty(exports, "__esModule", { value: true });`
 
