@@ -1,6 +1,6 @@
 # Index
 
-1. [Introduction]()
+1. [Introduction](/concepts/introdcution.md)
 
 ## Basics of Webpack
 
